@@ -20,6 +20,8 @@ opcode_fn_t get_cmd_fn(prog_t *prog)
 		{"mul", mul_func},
 		{"div", div_func},
 		{"mod", mod_func},
+		{"pchar", pchar_func},
+		{"pstr", pstr_func},
 		{"rotl", rotl_func},
 		{"rotr", rotr_func},
 		{NULL, NULL}

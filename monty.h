@@ -75,6 +75,8 @@ void pint_func(stack_t **stack, unsigned int l_num);
 void swap_func(stack_t **stack, unsigned int l_num);
 void free_prog(prog_t *prog);
 void sub_func(stack_t **stack, unsigned int l_num);
+void pchar_func(stack_t **stack, unsigned int l_num);
+void pstr_func(stack_t **stack, unsigned int l_num);
 void div_func(stack_t **stack, unsigned int l_num);
 void mul_func(stack_t **stack, unsigned int l_num);
 void mod_func(stack_t **stack, unsigned int l_num);

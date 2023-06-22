@@ -29,3 +29,47 @@ void div_func(stack_t **stack, unsigned int l_num)
 
 	(*stack)->n = division;
 }
+
+/**
+ * pchar_func - Function to print char(n) of head of stack
+ * @stack: Pointer to pointer of stack's head
+ * @l_num: Current Line Number
+ */
+void pchar_func(stack_t **stack, unsigned int l_num)
+{
+	if (!*stack || !stack)
+	{
+		free_prog(prog);
+		print_error(1, 3, "L", l_num, ": can't pchar, stack empty");
+		exit(EXIT_FAILURE);
+	}
+
+	if ((*stack)->n < 0 || (*stack)->n > 255)
+	{
+		free_prog(prog);
+		print_error(1, 3, "L", l_num, ": can't pchar, value out of range");
+		exit(EXIT_FAILURE);
+	}
+	printf("%c\n", (*stack)->n);
+}
+
+/**
+ * pstr_func - Function to print char(n) of head of stack
+ * @stack: Pointer to pointer of stack's head
+ * @l_num: Current Line Number
+ */
+void pstr_func(stack_t **stack, unsigned int __attribute((unused))l_num)
+{
+	stack_t *current = *stack;
+
+	while (current)
+	{
+		if (current->n == 0)
+			break;
+		if (current->n < 0 || current->n > 255)
+			break;
+		printf("%c", current->n);
+		current = current->next;
+	}
+	printf("\n");
+}
