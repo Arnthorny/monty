@@ -44,7 +44,7 @@ void pchar_func(stack_t **stack, unsigned int l_num)
 		exit(EXIT_FAILURE);
 	}
 
-	if ((*stack)->n < 0 || (*stack)->n > 255)
+	if ((*stack)->n < 0 || (*stack)->n > 127)
 	{
 		free_prog(prog);
 		print_error(1, 3, "L", l_num, ": can't pchar, value out of range");
@@ -64,9 +64,7 @@ void pstr_func(stack_t **stack, unsigned int __attribute((unused))l_num)
 
 	while (current)
 	{
-		if (current->n == 0)
-			break;
-		if (current->n < 0 || current->n > 255)
+		if (current->n <= 0 || current->n > 127)
 			break;
 		printf("%c", current->n);
 		current = current->next;
