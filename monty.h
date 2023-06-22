@@ -12,6 +12,8 @@
 #include <errno.h>
 #include <string.h>
 
+#define UNUSED __attribute__((unused))
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -80,6 +82,8 @@ void handle_file(prog_t *prog);
 char *extract_word(char *s);
 int *is_number(char *str, int *num_p);
 size_t stack_len(stack_t **stack);
+void add_func(stack_t **stack, unsigned int l_num);
+void nop_func(UNUSED stack_t **stack, UNUSED unsigned int l_num);
 
 
 #endif /*_MONTY_H_*/

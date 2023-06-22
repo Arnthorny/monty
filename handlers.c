@@ -13,10 +13,10 @@ opcode_fn_t get_cmd_fn(prog_t *prog)
 		{"pall", pall_func},
 		{"pint", pint_func},
 		{"pop", pop_func},
+		{"add", add_func},
+		{"nop", nop_func},
 		/*
 		 * {"swap", swap_func},
-		 * {"add", add_func},
-		 * {"nop", nop_func},
 		 */
 		{NULL, NULL}
 	};
