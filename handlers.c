@@ -16,6 +16,10 @@ opcode_fn_t get_cmd_fn(prog_t *prog)
 		{"add", add_func},
 		{"nop", nop_func},
 		{"swap", swap_func},
+		{"sub", sub_func},
+		{"mul", mul_func},
+		{"div", div_func},
+		{"mod", mod_func},
 		{NULL, NULL}
 	};
 	int i = 0;
