@@ -88,3 +88,30 @@ void pop_func(stack_t **stack, unsigned int l_num)
 	print_error(1, 3, "L", l_num,  ": can't pop an empty stack");
 	exit(EXIT_FAILURE);
 }
+
+/**
+ * swag_func - Function to handle the pall opcode
+ * @stack: Pointer to pointer of stack's head
+ * @l_num: Current Line Number
+ */
+
+void swap_func(stack_t **stack, unsigned int l_num)
+{
+	stack_t *current = *stack, *next = NULL;
+
+	if (current && current->next)
+	{
+		next = current->next;
+		next->prev = NULL;
+		current->prev = next;
+		current->next = next->next;
+		if (next->next)
+			next->next->prev = current;
+		next->next = current;
+		*stack = next;
+		return;
+	}
+	free_prog(prog);
+	print_error(1, 3, "L", l_num, ": can't swap, stack too short");
+	exit(EXIT_FAILURE);
+}

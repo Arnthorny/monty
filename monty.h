@@ -72,6 +72,7 @@ void pall_func(stack_t **stack, unsigned int l_num);
 void push_func(stack_t **stack, unsigned int l_num);
 void pop_func(stack_t **stack, unsigned int l_num);
 void pint_func(stack_t **stack, unsigned int l_num);
+void swap_func(stack_t **stack, unsigned int l_num);
 void free_prog(prog_t *prog);
 void free_stack(stack_t *head);
 stack_t *add_elem(stack_t **head, int n);
