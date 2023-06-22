@@ -5,9 +5,10 @@
  * @stack: Pointer to pointer of stack's head
  * @l_num: Current Line Number
  */
-void nop_func(UNUSED stack_t **stack, UNUSED unsigned int l_num)
+void nop_func(stack_t **stack, unsigned int l_num)
 {
-	;
+	(void)stack;
+	(void)l_num;
 }
 /**
  * add_func - Function to add the top two elements of the stack
