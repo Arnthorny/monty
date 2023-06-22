@@ -43,7 +43,9 @@ void handle_cmd(prog_t *prog, opcode_fn_t op_fn)
 {
 	unsigned int l_num = prog->line_num;
 
-	if (!op_fn)
+	if ((prog->opcode) && (prog->opcode)[0] == '#')
+		return;
+	else if (!op_fn)
 	{
 		print_error(1, 4, "L", l_num, ": unknown instruction ", prog->opcode);
 		free_prog(prog);
