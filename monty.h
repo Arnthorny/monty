@@ -89,6 +89,8 @@ int *is_number(char *str, int *num_p);
 size_t stack_len(stack_t **stack);
 void add_func(stack_t **stack, unsigned int l_num);
 void nop_func(UNUSED stack_t **stack, UNUSED unsigned int l_num);
+void rotl_func(stack_t **stack, unsigned int l_num);
+void rotr_func(stack_t **stack, unsigned int l_num);
 
 
 #endif /*_MONTY_H_*/
