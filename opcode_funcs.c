@@ -90,7 +90,7 @@ void pop_func(stack_t **stack, unsigned int l_num)
 }
 
 /**
- * swag_func - Function to handle the pall opcode
+ * swap_func - Function to handle the pall opcode
  * @stack: Pointer to pointer of stack's head
  * @l_num: Current Line Number
  */

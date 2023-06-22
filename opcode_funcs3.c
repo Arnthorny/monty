@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * dov_func - Function to divides the  top two elements of the stack
+ * div_func - Function to divides the  top two elements of the stack
  * @stack: Pointer to pointer of stack's head
  * @l_num: Current Line Number
  */
