@@ -54,3 +54,24 @@ int *is_number(char *str, int *num_p)
 	}
 	return (num_p);
 }
+
+
+/**
+ * stack_len - Function to count elements in stack
+ * @h: Pointer to pointer of stack's head
+ * Return: Number of elements in stack
+ */
+
+size_t stack_len(stack_t **stack)
+{
+	size_t count = 0;
+	stack_t *head;
+
+	head = *stack;
+	while (head)
+	{
+		count++;
+		head = head->next;
+	}
+	return (count);
+}

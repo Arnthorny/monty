@@ -79,6 +79,7 @@ void handle_cmd(prog_t *prog, opcode_fn_t op_fn);
 void handle_file(prog_t *prog);
 char *extract_word(char *s);
 int *is_number(char *str, int *num_p);
+size_t stack_len(stack_t **stack);
 
 
 #endif /*_MONTY_H_*/
