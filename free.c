@@ -28,4 +28,3 @@ void free_prog(prog_t *prog)
 	free(prog->curr_line);
 	free_stack(*(prog->stack));
 }
-

@@ -11,9 +11,9 @@ opcode_fn_t get_cmd_fn(prog_t *prog)
 	instruction_t all_ops[] = {
 		{"push", push_func},
 		{"pall", pall_func},
-		/**
-		 * {"pint", pint_func},
-		 * {"pop", pop_func},
+		{"pint", pint_func},
+		{"pop", pop_func},
+		/*
 		 * {"swap", swap_func},
 		 * {"add", add_func},
 		 * {"nop", nop_func},

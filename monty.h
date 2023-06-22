@@ -68,7 +68,10 @@ typedef void (*opcode_fn_t)(stack_t **stack, unsigned int line_number);
 
 void pall_func(stack_t **stack, unsigned int l_num);
 void push_func(stack_t **stack, unsigned int l_num);
+void pop_func(stack_t **stack, unsigned int l_num);
+void pint_func(stack_t **stack, unsigned int l_num);
 void free_prog(prog_t *prog);
+void free_stack(stack_t *head);
 stack_t *add_elem(stack_t **head, int n);
 void print_error(int is_line, const unsigned int n, ...);
 opcode_fn_t get_cmd_fn(prog_t *prog);
