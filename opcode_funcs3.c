@@ -58,7 +58,7 @@ void pchar_func(stack_t **stack, unsigned int l_num)
  * @stack: Pointer to pointer of stack's head
  * @l_num: Current Line Number
  */
-void pstr_func(stack_t **stack, unsigned int __attribute((unused))l_num)
+void pstr_func(stack_t **stack, UNUSED unsigned int l_num)
 {
 	stack_t *current = *stack;
 
